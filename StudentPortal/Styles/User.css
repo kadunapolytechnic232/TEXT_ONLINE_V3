@@ -1,0 +1,307 @@
+/* General Container for Layout */
+.MCD_U {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* Upper Toolbar */
+.MCD_UT {
+    background-color: #28a745;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.MCD_UT_L {
+    background-color: white;
+    border: 2px solid #009100;
+    border-radius: 6px;
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.MCD_UT_L img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.MCD_UT_R {
+    background-color: white;
+    width: 250px;
+    height: 80px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.MCD_UT_R:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.MCD_UT_R_N {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333;
+}
+
+.MCD_UT_R_R {
+    text-transform: uppercase;
+    color: #007BFF;
+}
+
+/* Status Indicator */
+.R_sign {
+    background-color: #e20000;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 5px;
+    left: 25px;
+    border-radius: 50%;
+    animation: R_sign 1.8s infinite ease;
+}
+
+@keyframes R_sign {
+    50% {
+        background-color: #770000;
+    }
+    100% {
+        background-color: #ff0000;
+    }
+}
+
+/* Reading Status */
+.T_reading {
+    background-color: #ac0000;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    animation: pulse 1s infinite ease;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Button Styles */
+.P_B, .N_B, .S_B {
+    background-color: #ff7300;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.N_B {
+    background-color: #28a745;
+}
+
+.S_B {
+    background-color: #dc3545;
+}
+
+.P_B:hover, .N_B:hover, .S_B:hover {
+    opacity: 0.9;
+}
+
+.P_B:active, .N_B:active, .S_B:active {
+    opacity: 0.9;
+}
+
+.MCD_UB_B {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+}
+
+/* Form Inputs and Selections */
+.OPT {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.I_M_Select, .I_M_SelectRed {
+    background-color: #00d600;
+    outline: 2px solid green;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+.I_M_SelectRed {
+    background-color: red;
+}
+
+.I_M {
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+/* Grid Layout for Options */
+.MCD_UB_AQ {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    background-color: rgba(0, 0, 0, 0.05);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+.AQ {
+    background-color: #fff;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.AQ:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* Full-Screen VR Mode */
+.VR_D {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    padding: 20px;
+    margin: 10px auto;
+    z-index: 999;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    overflow: scroll;
+    transition: all 0.3s ease;
+}
+
+.VR_DT {
+    border-bottom: 2px solid #fff;
+    background-color: #28a745; /* Green color for the header */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    line-height: 1.3;
+    max-height: 60px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to two lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.VR_DB {
+    background-color: rgba(0, 0, 0, 0.05); /* Slight grey */
+    border: 1px solid #ddd;
+    padding: 20px;
+    padding-bottom: 200px;
+    overflow-y: auto;
+    height: calc(100% - 70px);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+}
+
+
+/* Styling for the input fields */
+.MCD_UB_T {
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.MCD_UB_T:focus {
+    outline: none;
+    border-bottom-color: #28a745; /* Green focus */
+    background-color: #fff;
+}
+
+/* Finish Button */
+.User_finish {
+    background-color: #7a0000;
+    color: green;
+    padding: 12px 20px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+    margin: 20px auto;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+.User_finish:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
